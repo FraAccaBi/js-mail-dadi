@@ -35,35 +35,37 @@ button_input.addEventListener('click', function(){
 })
 
 
-
-
-
-
-
-
-
-
-
-
 /* Gioco dei dadi
 Generare un numero random da 1 a 6, sia per il giocatore sia per il computer. Stabilire il vincitore, in base a chi fa il punteggio più alto.*/
 
+//creo una variabile per il bottone lancia!
+const rollButton = document.getElementById('roll') 
+
 //genero un vaolre random per il giocatore
-const player_number = Math.ceil(Math.random()*6)
-console.log(player_number);
+//const player_number = Math.ceil(Math.random()*6)
+//console.log(player_number);
 
-//genero un valore random per il pc
-const pc_number = Math.ceil(Math.random()*6)
-console.log(pc_number);
+rollButton.addEventListener('click', function(){
 
-//confronto
-if (player_number > pc_number) {
-    console.log('hai vinto');
-} else if (player_number == pc_number){
-    console.log('pareggio');
-} else {
-    console.log('hai perso');
-}
+    //genero un valore random per il pc
+    const player_number = Math.ceil(Math.random()*6)
+    document.getElementById('player_number').innerHTML = player_number
+
+    //genero un valore random per il pc
+    const pc_number = Math.ceil(Math.random()*6)
+    document.getElementById('pc_number').innerHTML = pc_number
+
+    //confronto
+    if (player_number > pc_number) {
+        document.getElementById('resultGame').innerHTML = 'hai vinto';
+    } else if (player_number == pc_number){
+        document.getElementById('resultGame').innerHTML = 'pareggio';
+    } else {
+        document.getElementById('resultGame').innerHTML = 'hai perso';
+    }
+})
+
+
 
 
 /* 
