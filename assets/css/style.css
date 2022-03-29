@@ -1,0 +1,27 @@
+body{
+    background-color: bisque;
+}
+.mail, .game{
+    border: 2px dashed rgb(47, 128, 47);
+}
+
+.flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.p-1{
+    padding: 1rem;
+}
+.mt-1{
+    margin-top: 1rem;
+}
+
+#player_number, #pc_number{
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 100%; 
+}
+#resultGame{
+    text-transform: uppercase;
+}

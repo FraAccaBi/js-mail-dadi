@@ -41,13 +41,13 @@ Generare un numero random da 1 a 6, sia per il giocatore sia per il computer. St
 //creo una variabile per il bottone lancia!
 const rollButton = document.getElementById('roll') 
 
-//genero un vaolre random per il giocatore
+//genero un valore random per il giocatore
 //const player_number = Math.ceil(Math.random()*6)
 //console.log(player_number);
 
 rollButton.addEventListener('click', function(){
 
-    //genero un valore random per il pc
+    //genero un valore random per il giocatore
     const player_number = Math.ceil(Math.random()*6)
     document.getElementById('player_number').innerHTML = player_number
 
@@ -65,9 +65,8 @@ rollButton.addEventListener('click', function(){
     }
 })
 
-
-
-
 /* 
 BONUS:
 Usiamo un input e un bottone per inserire la mail e poi mostriamo i risultati in pagina. */
+
+
